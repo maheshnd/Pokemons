@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export const PokemonDetails = (props) => {
   const { id } = useParams();
   const [pokemonDeatils, setPokemonDeatils] = useState([]);
@@ -14,17 +15,15 @@ export const PokemonDetails = (props) => {
   }, []);
   return (
     <Container
-      className="px-4"
       style={{
         paddingTop: "3%",
         maxHeight: "14rem",
-        margin: "auto",
-        width: "auto",
+       
       }}
     >
       <Row style={{ maxHeight: "15rem" }}>
         <Col>
-          <Card className="cards" style={{ width: "18rem" }}>
+          <Card className="cards" bg="light"  style={{ width: "18rem" }}>
             <div style={{ height: "120px", textAlign: "center" }}>
               <Image
                 src={pokemonDeatils?.sprites?.back_default || ""}
@@ -40,6 +39,9 @@ export const PokemonDetails = (props) => {
                 <h6>Height: {pokemonDeatils.height}</h6>
               </Card.Text>
             </Card.Body>
+            <Link to={'/'}>
+            <Card.Footer>Go To Home</Card.Footer>
+            </Link>
           </Card>
         </Col>
       </Row>
