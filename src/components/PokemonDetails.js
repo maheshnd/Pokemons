@@ -26,6 +26,7 @@ export const PokemonDetails = () => {
         maxHeight: "14rem",
       }}
     >
+       <h3>Pokemon Details</h3>
       <Row style={{ maxHeight: "15rem" }}>
         {isLoading ? (
           <p>Please wait loading ......</p>
