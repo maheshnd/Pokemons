@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,
+import {HashRouter,
   Routes,
   Route} from 'react-router-dom';
 import {PokemonList} from './components/PokemonList'
@@ -8,7 +8,7 @@ import {PokemonDetails} from './components/PokemonDetails'
 import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div className="App">
     <Routes>
     <Route exact path="/" element={<PokemonList />} />
@@ -16,7 +16,7 @@ function App() {
     </Routes>
     </div>
    
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
